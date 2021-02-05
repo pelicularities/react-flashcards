@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { Card, CardContent } from "@material-ui/core";
 
 const Flashcard = ({ front, back }) => {
   const [isFront, setFront] = useState(true);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setFront(true);
   }, [front, back]);
 
